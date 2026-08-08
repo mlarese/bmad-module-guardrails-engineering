@@ -1,0 +1,14 @@
+# Gruppi tematici di bmad-party-mode installati dal setup di Guardrails Engineering.
+#
+# GENERATO da tools/build_modules.py: i membri sono ridotti alle figure che
+# questo modulo installa. Le figure delle altre aree Guardrails restano fuori.
+#
+# Sono override di team in {project-root}/_bmad/custom/bmad-party-mode.toml:
+# nessun default_party viene imposto, ogni gruppo si convoca con `--party <id>`.
+
+[[workflow.party_groups]]
+id = "grl-engineering"
+name = "Guardrails Engineering"
+scene = "Whiteboard tecnico: Otto riduce i confini all'essenziale, Kai prova a entrare, Bruno chiede chi manterrà il sistema alle tre di notte ed Enzo cerca il punto in cui un modello non serve. Le proposte devono avere un impianto minimo, un rischio concreto e una via di ritorno."
+members = ["grl-agent-architecture", "grl-agent-security", "grl-agent-ops", "grl-agent-ai"]
+memory = false

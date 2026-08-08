@@ -1,0 +1,26 @@
+{
+  "name": "guardrails-engineering",
+  "owner": "mlarese",
+  "description": "Guardrails Engineering: architettura, sicurezza, operations e impianto delle applicazioni AI.",
+  "plugins": [
+    {
+      "name": "gre",
+      "source": "./src",
+      "description": "Quattro figure di presidio su disciplina architetturale del codice, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici. Ogni raccomandazione porta il costo di non seguirla.",
+      "version": "1.16.0",
+      "author": "mlarese",
+      "homepage": "https://github.com/mlarese/bmad-module-guardrails-engineering",
+      "repository": "https://github.com/mlarese/bmad-module-guardrails-engineering",
+      "license": "MIT",
+      "skills": [
+        "src/skills/gre-setup",
+        "src/skills/gre-profile",
+        "src/skills/gre-board",
+        "src/skills/grl-agent-architecture",
+        "src/skills/grl-agent-security",
+        "src/skills/grl-agent-ops",
+        "src/skills/grl-agent-ai"
+      ]
+    }
+  ]
+}
