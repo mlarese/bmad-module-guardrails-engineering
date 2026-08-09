@@ -22,7 +22,7 @@ stesse figure, stesso comportamento, solo l'area engineering.
 
 | Skill | Comando | Cosa fa |
 | ----- | ------- | ------- |
-| `gre-profile` | Profila il progetto | Raccoglie in pochi minuti gli otto campi che danno contesto a tutte e quattro le figure, criticità inclusa. |
+| `gre-profile` | Profila il progetto | Raccoglie in pochi minuti gli otto campi che danno contesto a tutte e quattordici le figure, criticità inclusa. |
 | `gre-profile` | Aggiorna il profilo | Riallinea il profilo quando il progetto cambia, e dice se il cambiamento invalida rischi già accettati. |
 | `gre-board` | Convoca il collegio | Fa leggere lo stesso artefatto alle sole figure pertinenti e restituisce un riepilogo unico, conflitti compresi. |
 | `gre-board` | Rischi già accettati | Mostra, raggruppato per figura, quello che il progetto ha consapevolmente scelto di accettare. |
