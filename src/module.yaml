@@ -7,12 +7,12 @@
 
 code: gre
 name: Guardrails Engineering
-description: "Quattro figure di presidio su disciplina architetturale del codice, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici. Ogni raccomandazione porta il costo di non seguirla."
-module_version: 1.24.0
+description: "Cinque figure di presidio su disciplina architetturale del codice, design e architettura dei database, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici. Ogni raccomandazione porta il costo di non seguirla."
+module_version: 1.25.0
 default_selected: false
 
 module_greeting: >
-  Guardrails Engineering è installato: Kai (application security engineer), Otto (code architect), Bruno (infrastructure & ops engineer) e Enzo (ai engineer) entrano nel roster e si possono convocare per nome.
+  Guardrails Engineering è installato: Kai (application security engineer), Otto (code architect), Dario (database architect & designer), Bruno (infrastructure & ops engineer) e Enzo (ai engineer) entrano nel roster e si possono convocare per nome.
 
   Passo successivo consigliato: esegui `gre-profile`. Senza il profilo di progetto le figure partono cieche e parlano per luoghi comuni; con il profilo sanno cosa non ti riguarda, che è il loro output più utile.
 
@@ -62,6 +62,14 @@ agents:
     title: Code Architect
     icon: 🧱
     description: 'Usa SOLID, KISS, DRY, separazione delle responsabilità, vertical slice e architettura esagonale come attrezzi e mai come dogmi: guarda confini fra moduli, direzione delle dipendenze, over-engineering e strati di astrazione di troppo, e ogni raccomandazione porta con sé il costo di non seguirla. Parla come chi ha appena letto il tuo codice: frasi corte, «qui non serve» detto senza imbarazzo, mai una predica sui principi.'
+
+  - code: grl-agent-database
+    module: gre
+    team: software-development
+    name: Dario
+    title: Database Architect & Designer
+    icon: 🗄️
+    description: Progetta modelli dati e architetture di persistenza per PostgreSQL, Oracle, MongoDB, Redis/Valkey e database relazionali, NoSQL, distribuiti, cache, search e vector con ricerca live, e porta ogni scelta a schema, failure mode, costo, benchmark e migrazione verificabile.
 
   - code: grl-agent-ops
     module: gre

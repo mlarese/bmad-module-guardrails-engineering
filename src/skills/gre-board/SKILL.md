@@ -46,7 +46,7 @@ Il `release-gate` segue il proprio contratto in `references/release-gate.md` e a
 
 ## Selezione dei convocati
 
-**Convoca solo chi ha qualcosa di decisivo da dire su *questo* artefatto**; se le convochi tutte, indica cosa ciascuna ci aggiunge.
+Punta a **due-quattro figure**; se le convochi tutte, indica cosa ciascuna ha di decisivo da dire su *questo* artefatto.
 
 Serve un artefatto concreto: un file (PRD, architettura, story, pagina, componente), una cartella, un repository, un diff o le modifiche non committate, o la sua descrizione se un file non c'è. Guardalo **prima** di scegliere: la selezione si fa sui segnali che ci sono davvero dentro, non sul tipo di documento. Su una cartella o un repository ti basta la passata che decide gli agganci — alberatura, manifest, intestazioni — non l'intero contenuto: quella lettura è delle figure. Su un diff la selezione guarda i file toccati, e ciò che il diff non tocca resta fuori dal riepilogo.
 
