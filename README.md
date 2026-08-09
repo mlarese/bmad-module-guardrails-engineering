@@ -22,7 +22,6 @@ stesse figure, stesso comportamento, solo l'area engineering.
 
 | Skill | Comando | Cosa fa |
 | ----- | ------- | ------- |
-| `gre-setup` | Installa Guardrails Engineering | Registra Guardrails, le quattro figure, le stanze tematiche di party mode e le voci di help. Non crea la memoria condivisa. |
 | `gre-profile` | Profila il progetto | Raccoglie in pochi minuti gli otto campi che danno contesto a tutte e quattro le figure, criticità inclusa. |
 | `gre-profile` | Aggiorna il profilo | Riallinea il profilo quando il progetto cambia, e dice se il cambiamento invalida rischi già accettati. |
 | `gre-board` | Convoca il collegio | Fa leggere lo stesso artefatto alle sole figure pertinenti e restituisce un riepilogo unico, conflitti compresi. |
@@ -56,13 +55,6 @@ Guardrails: installandone due, il profilo resta uno solo e si compila una volta.
 Questo modulo installa skill con **lo stesso nome** del bundle `grl` — `grl-agent-security`
 sta identica in entrambi. Bundle e moduli tematici non vanno installati insieme nello
 stesso progetto: si sceglie il bundle completo, oppure i moduli delle aree che servono.
-
-## Stanze di party mode
-
-gre-setup installa le stanze del modulo in `_bmad/custom/bmad-party-mode.toml`, senza cambiare la stanza di default:
-
-- `bmad-party-mode --party grl-engineering`
-- `bmad-party-mode --party grl-automation`
 
 ## Licenza
 
