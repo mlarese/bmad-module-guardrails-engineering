@@ -8,7 +8,7 @@
 code: gre
 name: Guardrails Engineering
 description: "Quattro figure di presidio su disciplina architetturale del codice, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici. Ogni raccomandazione porta il costo di non seguirla."
-module_version: 1.23.0
+module_version: 1.24.0
 default_selected: false
 
 module_greeting: >
