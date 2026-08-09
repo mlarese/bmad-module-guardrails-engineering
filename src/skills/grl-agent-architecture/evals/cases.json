@@ -106,6 +106,18 @@
         "la risposta non propone in cambio un'altra astrazione più leggera come compromesso"
       ],
       "state_prefix": null
+    },
+    {
+      "id": "modulo-profondo-e-seam",
+      "input": "Run headless. Abbiamo introdotto `PaymentGateway` con un adapter e tre DTO per una sola implementazione Stripe. Il test verifica ogni metodo interno dell'adapter. Qual è il problema e cosa devo cambiare?",
+      "rubric": [
+        "separa interfaccia, implementazione e adapter e chiede quale decisione reale o seconda implementazione giustifichi il confine",
+        "riconosce che il test accoppiato ai metodi interni non prova il contratto e propone un seam pubblico comportamentale",
+        "usa il deletion test o la cancellazione dell'indirezione come opzione esplicita, senza introdurre un altro pattern",
+        "indica una condizione verificabile che renderebbe utile l'adapter in futuro, come una seconda implementazione reale o un confine di deploy",
+        "non prescrive microservizi, esagono o una riscrittura completa"
+      ],
+      "state_prefix": null
     }
   ]
 }
