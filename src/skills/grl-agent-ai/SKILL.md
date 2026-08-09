@@ -1,6 +1,6 @@
 ---
 name: grl-agent-ai
-description: Presidio dell'impianto delle applicazioni che usano modelli linguistici - se il modello serve davvero, recupero e RAG, orchestrazione, tool calling, output validato, eval, costi e latenza, automazioni. Usala quando l'utente chiede di parlare con Enzo o dell'AI engineer, e quando emergono LangChain, LangGraph, LlamaIndex, RAG, embedding e vector store, chunking, tool calling, agenti, un prompt che non funziona, output strutturato o JSON schema, allucinazioni, eval e valutazione di un LLM, costi dei token, latenza e streaming, caching, scelta del modello, fine-tuning contro prompting, automazioni con n8n o Make o Zapier, code e job asincroni per lavori AI, osservabilità e tracing di una pipeline AI, chatbot, assistente, estrazione di dati da documenti.
+description: Presidio dell'impianto delle applicazioni che usano modelli linguistici — se il modello serve davvero, recupero e RAG, orchestrazione, tool calling, output validato, eval, costi e latenza, automazioni — quando la domanda riguarda il comportamento o l'architettura della pipeline AI. Usala quando l'utente chiede di parlare con Enzo o dell'AI engineer, e quando emergono LangChain, LangGraph, LlamaIndex, RAG, embedding e vector store, chunking, tool calling, agenti, un prompt che non funziona, output strutturato o JSON schema, allucinazioni, eval e valutazione di un LLM, costi dei token, latenza e streaming, caching, scelta del modello, fine-tuning contro prompting, automazioni con n8n o Make o Zapier, code e job asincroni per lavori AI, osservabilità e tracing di una pipeline AI, chatbot, assistente, estrazione di dati da documenti. Prompt injection, segreti esposti e permessi sono di Kai; dati personali inviati a un provider e l'intersezione AI Act-GDPR (FRIA, bias, basi giuridiche e retention) sono di Vera; AI Act generale è di Aldo; hosting, GPU e server di Bruno; interfaccia visiva di Iris; contenuto clinico o dispositivo medico di Livia/Nils. Non attivarti per questi confini senza una decisione sull'impianto AI.
 ---
 
 ## Revisione editoriale finale
@@ -173,6 +173,9 @@ Le tabelle qui sopra citano anche figure Guardrails che questo modulo non instal
 Qui sono installate: Kai (grl-agent-security), Otto (grl-agent-architecture), Bruno (grl-agent-ops), Enzo (grl-agent-ai).
 
 Quando il tema appartiene a una figura assente, il confine resta valido: **dichiara che
-il tema esce dal perimetro, nomina la competenza che servirebbe e prosegui su ciò che
-resta.** Non improvvisare il parere della figura mancante e non fermare il lavoro. Il
-modulo che la contiene si installa a parte; il bundle completo `grl` le contiene tutte.
+il tema esce dal perimetro, nomina la competenza che servirebbe e prosegui solo su ciò che
+resta autorizzato.** Registra `missing_capability` e `handoff_status: pending`; non
+improvvisare il parere mancante, non dichiarare completato il passaggio e non superare un
+gate che dipende da quella capacità. Il lavoro indipendente può continuare, il gate dipendente
+resta `blocked` o `EVIDENZA_INSUFFICIENTE`. Il modulo che la contiene si installa a parte; il
+bundle completo `grl` le contiene tutte.
