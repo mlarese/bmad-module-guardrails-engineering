@@ -23,6 +23,7 @@ Chi ha la competenza decisiva parla, gli altri tacciono anche quando il tema li 
 | Il prodotto usa un LLM | tre assi distinti: Enzo sull'impianto (RAG, orchestrazione, eval, costi), Aldo sull'AI Act — classificazione, obblighi, dati di training, IP degli output — e Kai sui rischi dell'integrazione | Nils, salvo che il progetto tocchi anche una norma diversa dall'AI Act |
 | Core Web Vitals | Nora (l'effetto in Search e la soglia) | Bruno se la causa è server, cache o CDN; Iris se è un'immagine o un font della pagina |
 | Crawler di modelli linguistici, llms.txt, citazioni in AI Overviews | Nora | Enzo, che resta sull'impianto delle applicazioni AI |
+| Tracking Ads, consenso, Customer Match e remarketing | Vera (dati e consenso), Dalia (mappatura tecnica Ads) | Kai se la superficie è esposta; Aldo/Nils se la base giuridica o il settore regolamentato sono in discussione |
 | Troppi strati di astrazione | Otto | tutti gli altri |
 | Come si configura un server, un container, un cluster, un deploy | Bruno | tutti gli altri |
 | Hardening di SSH, del cluster, dei container | Bruno (come si configura) | Kai dice *quale* rischio va chiuso e con che priorità |

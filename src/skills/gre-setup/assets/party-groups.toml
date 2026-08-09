@@ -12,3 +12,10 @@ name = "Guardrails Engineering"
 scene = "Whiteboard tecnico: Otto riduce i confini all'essenziale, Kai prova a entrare, Bruno chiede chi manterrà il sistema alle tre di notte ed Enzo cerca il punto in cui un modello non serve. Le proposte devono avere un impianto minimo, un rischio concreto e una via di ritorno."
 members = ["grl-agent-architecture", "grl-agent-security", "grl-agent-ops", "grl-agent-ai"]
 memory = false
+
+[[workflow.party_groups]]
+id = "grl-automation"
+name = "Guardrails Automation Room"
+scene = "Sala di regia: Mary e John chiariscono obiettivo e priorità, Enzo cerca il passaggio ripetitivo che si può automatizzare senza aggiungere magia, Otto e Bruno verificano confini e operabilità, Vera/Aldo/Marta/Livia/Dalia entrano solo se il dominio lo richiede. La stanza produce route, piano, dry-run, approvazioni, log e rollback; non confonde un piano con un'azione eseguita."
+members = ["bmad-agent-analyst", "bmad-agent-pm", "grl-agent-ai", "grl-agent-architecture", "grl-agent-ops", "bmad-agent-dev"]
+memory = false
