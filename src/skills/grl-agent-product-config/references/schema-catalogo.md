@@ -119,7 +119,12 @@ evidence:                          # perché quella scelta, una voce per selezio
 
 assumptions: []                    # origin: assumed, con la ragione dichiarata
 
-missing:
+missing:                           # ciò che blocca: obbligatorie e opzioni imposte da una regola
+  - option: codice_ral
+    impact: blocking
+    question: "Qual è il codice RAL a campione?"
+
+open_choices:                      # facoltative non ancora decise: visibili, ma non bloccano
   - option: colore_interno
     impact: pricing
     question: "Colore interno: bianco, noce o RAL a campione?"
@@ -145,4 +150,14 @@ Ogni chiave di `selections` deve comparire in `evidence`: una scelta senza origi
 - `requires` non soddisfatti ed `excludes` violati;
 - selezioni prive di voce in `evidence`.
 
-L'esito è `valid`, `incomplete` (manca qualcosa ma nulla è in conflitto) o `invalid` (c'è almeno un conflitto). `incomplete` non è un errore: è lo stato normale di una richiesta appena letta.
+L'esito è `valid`, `incomplete` o `invalid`, e le tre parole significano una cosa sola:
+
+| Esito | Cosa dice | Cosa lo produce |
+| --- | --- | --- |
+| `valid` | è ordinabile | nessun conflitto e nessuna voce in `missing` |
+| `incomplete` | manca qualcosa che blocca | almeno una voce in `missing` |
+| `invalid` | c'è una contraddizione | almeno un errore |
+
+`missing` e `open_choices` non sono la stessa cosa e non vanno mescolati. In `missing` finisce ciò che blocca l'ordine: le opzioni `required` del catalogo, quelle rese obbligatorie da un `required_if`, quelle imposte da un `requires`. In `open_choices` finiscono le facoltative non ancora decise, con il loro `impact`: restano visibili in ogni output, ma una configurazione ordinabile con il colore ancora da scegliere è `valid`, non `incomplete`.
+
+`incomplete` non è un errore: è lo stato normale di una richiesta appena letta.

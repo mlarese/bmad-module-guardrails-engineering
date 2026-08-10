@@ -39,11 +39,13 @@ Le opzioni imposte da un `requires` entrano in configurazione con `origin: impos
 
 Un `excludes` violato dal documento è la scoperta più importante di tutta la lettura: il cliente ha chiesto una combinazione che non esiste. Non riscriverla per farla stare in piedi. Presenta il conflitto, la ragione dal `because`, e le alternative che il catalogo permette.
 
-### 6. Ordina ciò che manca
+### 6. Separa ciò che blocca da ciò che resta aperto
 
-Le opzioni non risolte diventano `missing`, ordinate per `impact`: prima quelle che bloccano l'ordine, poi quelle che cambiano il prezzo, per ultime quelle estetiche.
+Le opzioni obbligatorie e quelle imposte da una regola, se non risolte, diventano `missing` e rendono la configurazione `incomplete`. Le facoltative non decise diventano `open_choices`: restano visibili, con il loro `impact`, ma non bloccano l'ordine e non cambiano l'esito. Le due liste non si mescolano — un colore ancora da scegliere non è un ostacolo, e presentarlo come tale fa sembrare ferma una richiesta che si può già evadere.
 
-Ogni voce porta la domanda già formulata, pronta da inoltrare al cliente senza riscritture. Non una richiesta di dati: una domanda a cui si risponde in una riga.
+Entrambe le liste si ordinano per `impact`: prima ciò che blocca, poi ciò che cambia il prezzo, per ultimo l'estetico.
+
+Ogni voce di entrambe porta la domanda già formulata, pronta da inoltrare al cliente senza riscritture. Non una richiesta di dati: una domanda a cui si risponde in una riga.
 
 > Colore interno: bianco, noce, o RAL a campione? Con RAL serve anche il codice.
 
@@ -52,6 +54,8 @@ Ogni voce porta la domanda già formulata, pronta da inoltrare al cliente senza 
 Esegui `uv run scripts/config_validator.py config <path>` prima di presentare qualsiasi esito. L'output dello script è la fonte del verdetto: `valid`, `incomplete` o `invalid`.
 
 Se lo script non è eseguibile, applica le stesse verifiche a mano nello stesso ordine — dominio, obbligatorietà, `required_if`, `requires`, `excludes`, copertura di `evidence` — e dichiara che la validazione è manuale.
+
+L'esito si scrive con la stessa parola in entrambi i casi, e ogni violazione porta il suo codice: `serie=s82` con `rinforzo=false` è `invalid` per `requires-violated`, non «c'è un conflitto». Se hai potuto controllare solo una parte, dillo — ma il verdetto resta `valid`, `incomplete` o `invalid`, perché è quello che finisce nei due output di consegna.
 
 ## Le tre cose da non fare
 

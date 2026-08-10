@@ -242,6 +242,25 @@ class ConfigTests(unittest.TestCase):
         report = validate_config(config, copy.deepcopy(CATALOG))
         self.assertIn("line-mismatch", codes(report["errors"]))
 
+    def test_optional_option_left_open_does_not_break_validity(self):
+        report = validate_config(copy.deepcopy(CONFIG), copy.deepcopy(CATALOG))
+        self.assertEqual(report["status"], "valid")
+        self.assertEqual([item["option"] for item in report["open_choices"]], ["colore_interno"])
+        self.assertEqual(report["open_choices"][0]["impact"], "pricing")
+
+    def test_a_conditional_option_is_not_an_open_choice_until_its_rule_fires(self):
+        report = validate_config(copy.deepcopy(CONFIG), copy.deepcopy(CATALOG))
+        self.assertNotIn("codice_ral", [item["option"] for item in report["open_choices"]])
+
+    def test_an_option_the_rules_demand_is_missing_not_an_open_choice(self):
+        config = copy.deepcopy(CONFIG)
+        config["selections"]["colore_interno"] = "ral"
+        config["evidence"]["colore_interno"] = {"origin": "written", "quote": "p. 3"}
+        report = validate_config(config, copy.deepcopy(CATALOG))
+        self.assertEqual(report["status"], "incomplete")
+        self.assertEqual([item["option"] for item in report["missing"]], ["codice_ral"])
+        self.assertEqual(report["open_choices"], [])
+
     def test_missing_entries_are_ordered_by_impact(self):
         config = copy.deepcopy(CONFIG)
         config["selections"] = {"colore_interno": "ral"}

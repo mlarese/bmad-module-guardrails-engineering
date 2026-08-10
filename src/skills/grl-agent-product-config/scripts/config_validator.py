@@ -414,6 +414,23 @@ def validate_config(config: dict[str, Any], catalog: dict[str, Any]) -> dict[str
                 )
             )
 
+    # Un'opzione che esiste solo sotto condizione non è una scelta aperta: finché la
+    # condizione non scatta non riguarda nessuno, e quando scatta è già in `missing`.
+    conditional = {
+        (rule.get("then") or {}).get("option")
+        for rule in catalog.get("rules") or []
+        if isinstance(rule, dict) and rule.get("kind") == "required_if"
+    }
+    blocked = {item["option"] for item in missing}
+    open_choices = [
+        {"option": code, "impact": option.get("impact", "cosmetic")}
+        for code, option in options.items()
+        if not option.get("required")
+        and code not in selections
+        and code not in blocked
+        and code not in conditional
+    ]
+
     if errors:
         status = "invalid"
     elif missing:
@@ -423,6 +440,7 @@ def validate_config(config: dict[str, Any], catalog: dict[str, Any]) -> dict[str
 
     order = {"blocking": 0, "pricing": 1, "cosmetic": 2}
     missing.sort(key=lambda item: order.get(item.get("impact"), 3))
+    open_choices.sort(key=lambda item: order.get(item.get("impact"), 3))
 
     return {
         "kind": "config",
@@ -431,6 +449,7 @@ def validate_config(config: dict[str, Any], catalog: dict[str, Any]) -> dict[str
         "selections": len(selections),
         "errors": errors,
         "missing": missing,
+        "open_choices": open_choices,
         "warnings": warnings,
     }
 
@@ -443,7 +462,9 @@ def build_parser() -> argparse.ArgumentParser:
         prog="config_validator.py",
         description=(
             "Verifica un catalogo di prodotto o una configurazione. "
-            "Esiti: valid, incomplete (manca qualcosa, nessun conflitto), invalid (almeno un conflitto). "
+            "Esiti: valid (ordinabile), incomplete (manca qualcosa che blocca), invalid (almeno un conflitto). "
+            "`missing` è ciò che blocca — opzioni obbligatorie e opzioni imposte da una regola — e porta a incomplete. "
+            "`open_choices` sono le opzioni facoltative non ancora decise: restano visibili ma non cambiano l'esito. "
             "Exit code 0 se valid, 1 se incomplete o invalid, 2 se il file non è leggibile."
         ),
     )

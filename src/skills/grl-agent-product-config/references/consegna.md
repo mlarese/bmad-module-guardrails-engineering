@@ -4,6 +4,8 @@ La stessa configurazione va a due lettori con bisogni opposti. Il venditore deve
 
 Entrambi vivono in `{output_folder}/product-config/{slug}/`, accanto al `config.yaml` che li ha generati.
 
+**Si consegnano insieme, nella stessa risposta.** Annunciare il secondo — «poi ti preparo l'interno», «vuoi che lo scriva?» — non è consegnare: chi legge resta con metà del lavoro e deve chiederlo. Se uno dei due è breve perché la configurazione è appena iniziata, resta breve, ma c'è.
+
 ## Output interno — `interno.md`
 
 Destinatario: chi in azienda porta avanti la richiesta.
@@ -29,7 +31,11 @@ Uno per riga: cosa ha chiesto il cliente, quale regola lo esclude, quali alterna
 
 ## Mancano
 
-Ordinate per impatto, con la domanda già scritta.
+Solo ciò che blocca — obbligatorie e opzioni imposte da una regola — ordinato per impatto, con la domanda già scritta.
+
+## Scelte ancora aperte
+
+Le facoltative non decise, con il loro impatto. Non cambiano l'esito e vanno tenute separate dalle mancanze, altrimenti una configurazione ordinabile sembra bloccata.
 
 ## Note per il reparto
 
