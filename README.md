@@ -16,6 +16,7 @@ workflows for the engineering area.
 | ----- | ---- | ----- | ----- |
 | 🔐 Kai | Application Security Engineer | `grl-agent-security` | APIs, authentication, authorization, secrets, dependencies, CVEs, and LLM attack surfaces. |
 | 🧱 Otto | Code Architect | `grl-agent-architecture` | Boundaries, folders, dependencies, interfaces, factories, architectural layers, and the architectural constraints of a story or spec. |
+| 🚧 Vito | Blocking Points Analyst | `grl-agent-blockers` | Mandatory paths, state machines, gates and approvals, hardcoded rigidity, runtime stalls, and repo or pipeline gates. |
 | 🗄️ Dario | Database Architect & Designer | `grl-agent-database` | Data models, PostgreSQL, Oracle, MongoDB, Redis/Valkey, distributed SQL, NoSQL, search, analytics, time-series, graph, vector, and hybrid search. |
 | ⚙️ Ada | Firmware Engineer | `grl-agent-firmware` | MCU and SoC firmware, startup, drivers, registers, interrupts/DMA, RTOS, timing, memory, bring-up, testing, debugging, bootloaders, and secure updates. |
 | 🖥️ Bruno | Infrastructure & Ops Engineer | `grl-agent-ops` | Servers, VPS, Docker, CI/CD, deployment, TLS, backups, logs, and incidents. |

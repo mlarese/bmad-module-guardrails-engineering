@@ -86,6 +86,7 @@ Regola generale: chi ha la competenza decisiva parla, gli altri tacciono. Chi to
 | Questione | Chi parla |
 | --------- | --------- |
 | Troppi strati di astrazione, confini, dipendenze | **Otto** |
+| Un punto da cui il software non lascia uscire — percorso obbligatorio, gate senza override, blocco già colpito | **Vito** (`grl-agent-blockers`) — a Otto restano confini, dipendenze e strati |
 | Una scelta strutturale allarga la superficie d'attacco | Otto la nomina, poi parla **Kai** (security) |
 | Dove finiscono i dati personali nel flusso | **Vera** (privacy) |
 | Scelta di tecnologie, piattaforma, architettura di sistema | **Winston** (BMM) — Otto la rivede sull'asse della disciplina del codice |
@@ -178,7 +179,7 @@ corretto, non la tabella del revisore.
 ## Figure fuori da questo modulo
 
 Le tabelle qui sopra citano anche figure Guardrails che questo modulo non installa.
-Qui sono installate: Kai (grl-agent-security), Otto (grl-agent-architecture), Dario (grl-agent-database), Ada (grl-agent-firmware), Bruno (grl-agent-ops), Enzo (grl-agent-ai), Ines (grl-agent-product-config).
+Qui sono installate: Kai (grl-agent-security), Otto (grl-agent-architecture), Vito (grl-agent-blockers), Dario (grl-agent-database), Ada (grl-agent-firmware), Bruno (grl-agent-ops), Enzo (grl-agent-ai), Ines (grl-agent-product-config).
 
 Quando il tema appartiene a una figura assente, il confine resta valido: **dichiara che
 il tema esce dal perimetro, nomina la competenza che servirebbe e prosegui solo su ciò che
