@@ -29,6 +29,7 @@ workflows for the engineering area.
 | ----- | ------- |
 | `gre-profile` | Project profile | Collects the project context shared by every installed figure. |
 | `gre-board` | Multidisciplinary review | Convenes the relevant figures on one artifact and returns a review summary or release verdict. |
+| `grl-bug-finder` | Bug and regression diagnosis | Builds a minimal reproduction, traces the failure path, separates evidence from hypotheses, and proposes a regression test without changing the artifact. |
 | `grl-automation` | Controlled automation | Routes work from read-only checks through dry-run to observable execution, with explicit approvals and rollback. |
 | `grl-toolchain` | Skills and MCP servers across harnesses | Finds and assesses skills and MCP servers, then installs them in each harness's own syntax behind a dry-run, a backup, and a verification step. |
 

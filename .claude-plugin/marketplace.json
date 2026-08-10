@@ -1,13 +1,13 @@
 {
   "name": "guardrails-engineering",
   "owner": "mlarese",
-  "description": "Guardrails Engineering: architettura del codice e dei database, punti di blocco, sicurezza, operations, impianto delle applicazioni AI e configurazione di prodotto.",
+  "description": "Guardrails Engineering: architettura del codice e dei database, diagnosi di bug e regressioni, punti di blocco, sicurezza, operations, impianto delle applicazioni AI e configurazione di prodotto.",
   "plugins": [
     {
       "name": "gre",
       "source": "./src",
-      "description": "Otto figure di presidio su disciplina architetturale del codice, punti in cui il software non lascia una via d'uscita, design e architettura dei database, scrittura firmware embedded e sistemi real-time, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici, configurazione di prodotto a partire dal documento del cliente — più un workflow che trova, valuta e installa skill e server MCP su ogni harness. Ogni raccomandazione porta il costo di non seguirla.",
-      "version": "1.27.0",
+      "description": "Otto figure di presidio su disciplina architetturale del codice, punti in cui il software non lascia una via d'uscita, design e architettura dei database, scrittura firmware embedded e sistemi real-time, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici, configurazione di prodotto a partire dal documento del cliente — più `grl-bug-finder` per la diagnosi read-only di bug e regressioni, `grl-automation` per i processi ripetibili e `grl-toolchain` per trovare, valutare e installare skill e server MCP su ogni harness. Ogni raccomandazione porta il costo di non seguirla.",
+      "version": "1.28.0",
       "author": "mlarese",
       "homepage": "https://github.com/mlarese/bmad-module-guardrails-engineering",
       "repository": "https://github.com/mlarese/bmad-module-guardrails-engineering",
@@ -23,6 +23,7 @@
         "src/skills/grl-agent-ops",
         "src/skills/grl-agent-ai",
         "src/skills/grl-agent-product-config",
+        "src/skills/grl-bug-finder",
         "src/skills/grl-automation",
         "src/skills/grl-toolchain"
       ]
