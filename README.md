@@ -1,6 +1,6 @@
 # Guardrails Engineering (`gre`)
 
-A focused BMad module for code architecture, database architecture and design, application security, infrastructure and operations, and AI application design. Every recommendation includes the cost of ignoring it.
+A focused BMad module for code architecture, database architecture and design, embedded firmware, application security, infrastructure and operations, and AI application design. Every recommendation includes the cost of ignoring it.
 
 This is a focused BMad module in the [Guardrails](https://github.com/mlarese/bmad-module-guardrails)
 bundle. It keeps the same behavior and shared memory while installing only the figures and
@@ -17,6 +17,7 @@ workflows for the engineering area.
 | 🔐 Kai | Application Security Engineer | `grl-agent-security` | APIs, authentication, authorization, secrets, dependencies, CVEs, and LLM attack surfaces. |
 | 🧱 Otto | Code Architect | `grl-agent-architecture` | Boundaries, folders, dependencies, interfaces, factories, architectural layers, and the architectural constraints of a story or spec. |
 | 🗄️ Dario | Database Architect & Designer | `grl-agent-database` | Data models, PostgreSQL, Oracle, MongoDB, Redis/Valkey, distributed SQL, NoSQL, search, analytics, time-series, graph, vector, and hybrid search. |
+| ⚙️ Ada | Firmware Engineer | `grl-agent-firmware` | MCU and SoC firmware, startup, drivers, registers, interrupts/DMA, RTOS, timing, memory, bring-up, testing, debugging, bootloaders, and secure updates. |
 | 🖥️ Bruno | Infrastructure & Ops Engineer | `grl-agent-ops` | Servers, VPS, Docker, CI/CD, deployment, TLS, backups, logs, and incidents. |
 | 🧠 Enzo | AI Engineer | `grl-agent-ai` | LLMs, prompts, RAG, embeddings, tool calling, evaluations, costs, and latency. |
 

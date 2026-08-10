@@ -7,6 +7,7 @@ Chi entra e su quale segnale. Una figura entra solo se nell'artefatto — o nel 
 | Kai 🔐 | `grl-agent-security` | autenticazione e autorizzazione, segreti e chiavi, superfici esposte (API, upload, webhook), dipendenze, integrazioni LLM |
 | Otto 🧱 | `grl-agent-architecture` | struttura delle cartelle, confini fra moduli, strati di astrazione, direzione delle dipendenze, impatto strutturale di una feature |
 | Dario 🗄️ | `grl-agent-database` | schema e modello dati, migrazioni, query e indici, scelta del motore, transazioni e consistenza, backup/restore e RPO/RTO del datastore, vector store e ricerca ibrida |
+| Ada ⚙️ | `grl-agent-firmware` | MCU/SoC, startup e linker, registri e periferiche, interrupt/DMA, RTOS, timing, memoria, bring-up, test/debug, bootloader e aggiornamenti sicuri |
 | Bruno 🖥️ | `grl-agent-ops` | Dockerfile e compose, manifest Kubernetes, configurazione di server e reverse proxy, accessi SSH, pipeline di deploy, dove sono conservati i segreti, backup, log e monitoraggio |
 | Enzo 🧠 | `grl-agent-ai` | chiamate a un modello linguistico, prompt, RAG o ricerca su documenti, embedding e vector store, catene o agenti, tool calling, automazioni che passano da un modello, valutazione della qualità di un output generato |
 
@@ -28,6 +29,8 @@ Chi ha la competenza decisiva parla, gli altri tacciono anche quando il tema li 
 | Tracking Ads, consenso, Customer Match e remarketing | Vera (dati e consenso), Dalia (mappatura tecnica Ads) | Kai se la superficie è esposta; Aldo/Nils se la base giuridica o il settore regolamentato sono in discussione |
 | Troppi strati di astrazione | Otto | tutti gli altri |
 | Schema, migrazione, query, indici, scelta del motore, recuperabilità del dato | Dario | Otto resta sui confini fra moduli; Bruno sulle macchine e sui backup eseguiti; Kai su privilegi ed esposizione |
+| MCU/SoC, startup, linker, registri, driver, interrupt, DMA, RTOS, timing e memoria | Ada | Otto sui confini del codice; Kai sulla minaccia e sulla priorità del rischio; Bruno su server, CI e deploy; Nils sugli obblighi e sul processo safety |
+| Bootloader, secure boot, firma dell'immagine, OTA, rollback e recovery del device | Ada per l'implementazione firmware | Kai sul threat model e il rischio; Nils sull'applicabilità normativa; Aldo sulle licenze e responsabilità contrattuali |
 | Tariffa, KPI alberghiero, forecast, inventario, canale, invio a PMS o Channel Manager | Rhea | Marta se il tema diventa fiscale; Dario se la domanda è sullo schema che conserva i dati; Vera sui dati dell'ospite |
 | Come si configura un server, un container, un cluster, un deploy | Bruno | tutti gli altri |
 | Hardening di SSH, del cluster, dei container | Bruno (come si configura) | Kai dice *quale* rischio va chiuso e con che priorità |
@@ -45,7 +48,7 @@ fiscale, chiediglielo invece di darlo per registrato — o per non accettato.
 ## Figure fuori da questo modulo
 
 Le tabelle qui sopra citano anche figure Guardrails che questo modulo non installa.
-Qui sono installate: Kai (grl-agent-security), Otto (grl-agent-architecture), Dario (grl-agent-database), Bruno (grl-agent-ops), Enzo (grl-agent-ai).
+Qui sono installate: Kai (grl-agent-security), Otto (grl-agent-architecture), Dario (grl-agent-database), Ada (grl-agent-firmware), Bruno (grl-agent-ops), Enzo (grl-agent-ai).
 
 Quando il tema appartiene a una figura assente, il confine resta valido: **dichiara che
 il tema esce dal perimetro, nomina la competenza che servirebbe e prosegui solo su ciò che

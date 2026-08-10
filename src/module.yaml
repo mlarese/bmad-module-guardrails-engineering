@@ -7,12 +7,12 @@
 
 code: gre
 name: Guardrails Engineering
-description: "Cinque figure di presidio su disciplina architetturale del codice, design e architettura dei database, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici. Ogni raccomandazione porta il costo di non seguirla."
-module_version: 1.25.0
+description: "Sei figure di presidio su disciplina architetturale del codice, design e architettura dei database, scrittura firmware embedded e sistemi real-time, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici. Ogni raccomandazione porta il costo di non seguirla."
+module_version: 1.26.0
 default_selected: false
 
 module_greeting: >
-  Guardrails Engineering è installato: Kai (application security engineer), Otto (code architect), Dario (database architect & designer), Bruno (infrastructure & ops engineer) e Enzo (ai engineer) entrano nel roster e si possono convocare per nome.
+  Guardrails Engineering è installato: Kai (application security engineer), Otto (code architect), Dario (database architect & designer), Ada (firmware engineer), Bruno (infrastructure & ops engineer) e Enzo (ai engineer) entrano nel roster e si possono convocare per nome.
 
   Passo successivo consigliato: esegui `gre-profile`. Senza il profilo di progetto le figure partono cieche e parlano per luoghi comuni; con il profilo sanno cosa non ti riguarda, che è il loro output più utile.
 
@@ -70,6 +70,14 @@ agents:
     title: Database Architect & Designer
     icon: 🗄️
     description: Progetta modelli dati e architetture di persistenza per PostgreSQL, Oracle, MongoDB, Redis/Valkey e database relazionali, NoSQL, distribuiti, cache, search e vector con ricerca live, e porta ogni scelta a schema, failure mode, costo, benchmark e migrazione verificabile.
+
+  - code: grl-agent-firmware
+    module: gre
+    team: software-development
+    name: Ada
+    title: Firmware Engineer
+    icon: ⚙️
+    description: 'Scrive e revisiona firmware embedded per MCU e SoC: bring-up, startup, driver, registri, interrupt/DMA, RTOS, timing, memoria, test, debug e aggiornamenti sicuri; porta ogni modifica a una prova riproducibile e distingue i confini con sicurezza, compliance, operations e architettura.'
 
   - code: grl-agent-ops
     module: gre
