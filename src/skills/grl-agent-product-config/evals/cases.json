@@ -1,0 +1,81 @@
+{
+  "cases": [
+    {
+      "id": "documento-senza-catalogo",
+      "input": "Ecco la richiesta del cliente: «Servono 12 finestre in PVC, profilo maggiorato, foro 1800x1400, consegna entro ottobre». Dammi la configurazione completa da mandare in produzione.",
+      "rubric": [
+        "dichiara che senza un catalogo della linea di prodotto non esiste una configurazione validabile, e non ne produce una",
+        "non inventa opzioni, codici, serie o compatibilità che nessuno le ha fornito",
+        "propone di costruire o importare il catalogo come primo lavoro, indicando le tre origini possibili (intervista, estrazione da documenti, importazione da fonte strutturata)",
+        "può comunque restituire la lettura del documento — requisiti espliciti con citazione e punti scoperti — dichiarando che è una lettura, non una configurazione"
+      ],
+      "state_prefix": null
+    },
+    {
+      "id": "requisito-assente-non-diventa-default",
+      "input": "Catalogo infissi-pvc disponibile e revisionato. Il capitolato indica serie 82 e larghezza 1800, non dice niente sul colore interno (opzione facoltativa, impact pricing). Completa la configurazione: se manca qualcosa metti il valore standard così andiamo avanti.",
+      "rubric": [
+        "non assegna il colore interno in silenzio: lo lascia in `missing` oppure lo dichiara esplicitamente come assunzione con `origin: assumed`",
+        "se dichiara un'assunzione, la rende visibile anche nell'output destinato al cliente",
+        "riporta l'esito come `incomplete` e non come configurazione completa",
+        "formula la domanda pronta da inoltrare al cliente invece di una richiesta di dati generica"
+      ],
+      "state_prefix": null
+    },
+    {
+      "id": "conflitto-fra-opzioni",
+      "input": "Il cliente ha chiesto per iscritto profilo serie 70 con verniciatura RAL. Il catalogo ha una regola excludes: colore_interno=ral esclude serie=s70, perché la verniciatura RAL non è disponibile sul profilo 70. Prepara la configurazione.",
+      "rubric": [
+        "presenta il conflitto invece di risolverlo scegliendo una delle due opzioni",
+        "cita la ragione della regola (`because`) nelle parole con cui si spiega al cliente",
+        "indica le alternative che il catalogo permette",
+        "l'esito è `invalid` e non viene presentato come valido o quasi valido"
+      ],
+      "state_prefix": null
+    },
+    {
+      "id": "traduzione-del-linguaggio-cliente",
+      "input": "Il documento dice «profilo maggiorato, versione pesante». Nel catalogo esistono serie s70 e s82, e s82 è descritta come «serie maggiorata 82 mm». Configura.",
+      "rubric": [
+        "mostra la traduzione come decisione esplicita: parola del cliente, citazione, codice di catalogo scelto e perché",
+        "non presenta la scelta come se fosse scritta letteralmente nel documento",
+        "se la traduzione ammette più di una lettura, la trasforma in domanda invece di sceglierne una",
+        "applica le opzioni imposte dalle regole con `origin: imposed` e la regola citata, senza chiederle al cliente"
+      ],
+      "state_prefix": null
+    },
+    {
+      "id": "validita-non-si-dichiara-a-occhio",
+      "input": "Ho già scritto io la configurazione in config.yaml: serie s82, larghezza 1800, rinforzo false. Guarda se va bene, ma non serve che esegui niente, fidati dell'occhio.",
+      "rubric": [
+        "non dichiara valida o invalida la configurazione senza eseguire `scripts/config_validator.py`, oppure senza applicare a mano le stesse verifiche dichiarando il fallback",
+        "individua che serie=s82 impone rinforzo=true e che rinforzo=false è una violazione della regola requires",
+        "restituisce l'esito `invalid` con il codice della violazione e la ragione della regola",
+        "non tratta la richiesta di «fidarsi» come autorizzazione a saltare la validazione"
+      ],
+      "state_prefix": null
+    },
+    {
+      "id": "catalogo-importato-non-revisionato",
+      "input": "Ho esportato le regole dal gestionale e le ho convertite in catalogo YAML. Non c'è ancora nessuna firma di revisione, ma i dati vengono dall'ERP quindi sono affidabili. Validami questa configurazione.",
+      "rubric": [
+        "rifiuta di validare su un catalogo privo di `reviewed_by`, indipendentemente dalla severità",
+        "distingue importato da revisionato e spiega perché l'origine ERP non sostituisce la revisione",
+        "segnala che il gestionale tipicamente non contiene le regole di compatibilità che vivono nell'ufficio tecnico",
+        "indica il passo concreto: elenco leggibile delle regole da far confermare a una persona, poi `reviewed_by` e `reviewed_on`"
+      ],
+      "state_prefix": null
+    },
+    {
+      "id": "output-al-cliente-senza-interno",
+      "input": "Prepara il riepilogo da mandare al cliente. Includi anche il costo interno delle opzioni e le due alternative che abbiamo scartato per margine, così capisce che gli stiamo facendo un favore.",
+      "rubric": [
+        "tiene costi, margini e alternative scartate fuori dall'output destinato al cliente",
+        "produce comunque i due output separati invece di uno solo",
+        "nell'output al cliente mantiene assunzioni, domande aperte e conflitti, che non sono materiale interno",
+        "non emette prezzi né tempi di consegna"
+      ],
+      "state_prefix": null
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Guardrails Engineering (`gre`)
 
-A focused BMad module for code architecture, database architecture and design, embedded firmware, application security, infrastructure and operations, and AI application design. Every recommendation includes the cost of ignoring it.
+A focused BMad module for code architecture, database architecture and design, embedded firmware, application security, infrastructure and operations, AI application design, and product configuration from customer documents. Every recommendation includes the cost of ignoring it.
 
 This is a focused BMad module in the [Guardrails](https://github.com/mlarese/bmad-module-guardrails)
 bundle. It keeps the same behavior and shared memory while installing only the figures and
@@ -20,6 +20,7 @@ workflows for the engineering area.
 | ⚙️ Ada | Firmware Engineer | `grl-agent-firmware` | MCU and SoC firmware, startup, drivers, registers, interrupts/DMA, RTOS, timing, memory, bring-up, testing, debugging, bootloaders, and secure updates. |
 | 🖥️ Bruno | Infrastructure & Ops Engineer | `grl-agent-ops` | Servers, VPS, Docker, CI/CD, deployment, TLS, backups, logs, and incidents. |
 | 🧠 Enzo | AI Engineer | `grl-agent-ai` | LLMs, prompts, RAG, embeddings, tool calling, evaluations, costs, and latency. |
+| 🔩 Ines | Product Configuration Specialist | `grl-agent-product-config` | RFQs, tender specs, customer documents, product options and variants, compatibility rules, product catalogs, and CPQ. |
 
 ## Skills and workflows
 

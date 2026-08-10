@@ -1,12 +1,12 @@
 {
   "name": "guardrails-engineering",
   "owner": "mlarese",
-  "description": "Guardrails Engineering: architettura del codice e dei database, sicurezza, operations e impianto delle applicazioni AI.",
+  "description": "Guardrails Engineering: architettura del codice e dei database, sicurezza, operations, impianto delle applicazioni AI e configurazione di prodotto.",
   "plugins": [
     {
       "name": "gre",
       "source": "./src",
-      "description": "Sei figure di presidio su disciplina architetturale del codice, design e architettura dei database, scrittura firmware embedded e sistemi real-time, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici — più un workflow che trova, valuta e installa skill e server MCP su ogni harness. Ogni raccomandazione porta il costo di non seguirla.",
+      "description": "Sette figure di presidio su disciplina architetturale del codice, design e architettura dei database, scrittura firmware embedded e sistemi real-time, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici, configurazione di prodotto a partire dal documento del cliente — più un workflow che trova, valuta e installa skill e server MCP su ogni harness. Ogni raccomandazione porta il costo di non seguirla.",
       "version": "1.26.0",
       "author": "mlarese",
       "homepage": "https://github.com/mlarese/bmad-module-guardrails-engineering",
@@ -21,6 +21,7 @@
         "src/skills/grl-agent-security",
         "src/skills/grl-agent-ops",
         "src/skills/grl-agent-ai",
+        "src/skills/grl-agent-product-config",
         "src/skills/grl-automation",
         "src/skills/grl-toolchain"
       ]

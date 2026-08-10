@@ -10,6 +10,7 @@ Chi entra e su quale segnale. Una figura entra solo se nell'artefatto — o nel 
 | Ada ⚙️ | `grl-agent-firmware` | MCU/SoC, startup e linker, registri e periferiche, interrupt/DMA, RTOS, timing, memoria, bring-up, test/debug, bootloader e aggiornamenti sicuri |
 | Bruno 🖥️ | `grl-agent-ops` | Dockerfile e compose, manifest Kubernetes, configurazione di server e reverse proxy, accessi SSH, pipeline di deploy, dove sono conservati i segreti, backup, log e monitoraggio |
 | Enzo 🧠 | `grl-agent-ai` | chiamate a un modello linguistico, prompt, RAG o ricerca su documenti, embedding e vector store, catene o agenti, tool calling, automazioni che passano da un modello, valutazione della qualità di un output generato |
+| Ines 🔩 | `grl-agent-product-config` | richiesta d'offerta, capitolato o specifica cliente da tradurre in prodotto, opzioni e varianti, regole di compatibilità, catalogo di prodotto, distinta base, configuratore o CPQ |
 
 Oltre alle figure, una rotta: su una landing o una pagina di prodotto convoca anche `grl-web` in diagnosi, per l'asse che nessuna figura copre — cosa la pagina dice, in che ordine, e se chiede l'azione prima di aver smontato l'obiezione. Quando la pagina arriva dal gate di `grl-web`, la lettura non ripete l'asse ma lo **verifica**: si ricostruisce il brief dalla pagina a freddo e si dice dove diverge da quello scritto. Se non diverge, è una riga sola. Conta come rotta, non come figura del collegio.
 
@@ -32,6 +33,7 @@ Chi ha la competenza decisiva parla, gli altri tacciono anche quando il tema li 
 | MCU/SoC, startup, linker, registri, driver, interrupt, DMA, RTOS, timing e memoria | Ada | Otto sui confini del codice; Kai sulla minaccia e sulla priorità del rischio; Bruno su server, CI e deploy; Nils sugli obblighi e sul processo safety |
 | Bootloader, secure boot, firma dell'immagine, OTA, rollback e recovery del device | Ada per l'implementazione firmware | Kai sul threat model e il rischio; Nils sull'applicabilità normativa; Aldo sulle licenze e responsabilità contrattuali |
 | Tariffa, KPI alberghiero, forecast, inventario, canale, invio a PMS o Channel Manager | Rhea | Marta se il tema diventa fiscale; Dario se la domanda è sullo schema che conserva i dati; Vera sui dati dell'ospite |
+| Opzioni di prodotto, compatibilità fra componenti, catalogo di configurazione, documento del cliente da tradurre in prodotto | Ines | Dario se la domanda è come conservare il catalogo; Otto sui confini del software che lo usa; Aldo su capitolato e condizioni di fornitura; Nils sugli obblighi normativi del prodotto |
 | Come si configura un server, un container, un cluster, un deploy | Bruno | tutti gli altri |
 | Hardening di SSH, del cluster, dei container | Bruno (come si configura) | Kai dice *quale* rischio va chiuso e con che priorità |
 | Segreti in produzione | Bruno (dove si conservano e come si iniettano) | Kai sul rischio dell'esposizione |
@@ -48,7 +50,7 @@ fiscale, chiediglielo invece di darlo per registrato — o per non accettato.
 ## Figure fuori da questo modulo
 
 Le tabelle qui sopra citano anche figure Guardrails che questo modulo non installa.
-Qui sono installate: Kai (grl-agent-security), Otto (grl-agent-architecture), Dario (grl-agent-database), Ada (grl-agent-firmware), Bruno (grl-agent-ops), Enzo (grl-agent-ai).
+Qui sono installate: Kai (grl-agent-security), Otto (grl-agent-architecture), Dario (grl-agent-database), Ada (grl-agent-firmware), Bruno (grl-agent-ops), Enzo (grl-agent-ai), Ines (grl-agent-product-config).
 
 Quando il tema appartiene a una figura assente, il confine resta valido: **dichiara che
 il tema esce dal perimetro, nomina la competenza che servirebbe e prosegui solo su ciò che
