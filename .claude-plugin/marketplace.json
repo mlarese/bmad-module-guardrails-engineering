@@ -7,7 +7,7 @@
       "name": "gre",
       "source": "./src",
       "description": "Otto figure di presidio su disciplina architetturale del codice, punti in cui il software non lascia una via d'uscita, design e architettura dei database, scrittura firmware embedded e sistemi real-time, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici, configurazione di prodotto a partire dal documento del cliente — più `grl-bug-finder` per la diagnosi read-only di bug e regressioni, `grl-automation` per i processi ripetibili e `grl-toolchain` per trovare, valutare e installare skill e server MCP su ogni harness. Ogni raccomandazione porta il costo di non seguirla.",
-      "version": "1.34.0",
+      "version": "1.34.1",
       "author": "mlarese",
       "homepage": "https://github.com/mlarese/bmad-module-guardrails-engineering",
       "repository": "https://github.com/mlarese/bmad-module-guardrails-engineering",
