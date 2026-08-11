@@ -8,7 +8,7 @@
 code: gre
 name: Guardrails Engineering
 description: "Otto figure di presidio su disciplina architetturale del codice, punti in cui il software non lascia una via d'uscita, design e architettura dei database, scrittura firmware embedded e sistemi real-time, sicurezza applicativa, infrastruttura e operatività, impianto delle applicazioni che usano modelli linguistici, configurazione di prodotto a partire dal documento del cliente — più `grl-bug-finder` per la diagnosi read-only di bug e regressioni, `grl-automation` per i processi ripetibili e `grl-toolchain` per trovare, valutare e installare skill e server MCP su ogni harness. Ogni raccomandazione porta il costo di non seguirla."
-module_version: 1.35.1
+module_version: 1.35.3
 default_selected: false
 
 module_greeting: >
